@@ -1,14 +1,17 @@
-function [res] = getMessage(mask)
-tmp = 0;
+function [res] = getMessage(mask,a,b)
+% vengono estratti tutti i bit del messaggio nella maschera a partire
+% dall'1 inserito nell'encoding 
+
+isMessage = 0;
 cont = 1;
 mask = rot90(mask);
 mask = fliplr(mask);
-    for i = 1:512
-        for j = 1:512
+    for i = 1:a
+        for j = 1:b
             if mask(i,j) == 1
-                tmp = 1;
+                isMessage = 1;
             end
-            if tmp == 1
+            if isMessage == 1
                 res(1,cont) = mask(i,j);
                 cont = cont+1;
             end

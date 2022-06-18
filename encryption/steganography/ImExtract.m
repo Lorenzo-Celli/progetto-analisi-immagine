@@ -10,6 +10,6 @@ function [res] = ImExtract(imInput)
     IBP7 = bitget(imInput,8)*(2^7);
 
     res = uint8(IBP7 +IBP6+ IBP5+ IBP4+IBP3+IBP2+IBP1+IBP0);
-    figure, imshow(res);
+
 end
 

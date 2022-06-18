@@ -1,12 +1,14 @@
 %% prova text hiding
 clc, clear; close all;
 
-str = 'Lorem ipsum dolor sit amet1';
+txt = 'Lorem ipsum dolor sit amet';
 barbara = imread("Barbara.bmp");
 
-res = TxtHide(barbara,str);
+hide = TxtHide(barbara,txt);
 
-testoh = TxtExtract(res);
+figure, imshow(hide);
+
+messaggio = TxtExtract(hide);
 
 %% prova img hiding
 clc, close all; clear;
@@ -14,6 +16,12 @@ clc, close all; clear;
 lena = imread("Lena.bmp");
 barbara = imread("Barbara.bmp");
 
-res = ImHide(lena,barbara);
-barb = uint8(ImExtract(res));
- psnr = psnr(barbara,barb);
+hide = ImHide(lena,barbara);
+
+figure, imshow(hide);
+
+newBarbara= uint8(ImExtract(hide));
+
+figure, imshow(newBarbara);
+
+psnr = psnr(barbara,newBarbara);
