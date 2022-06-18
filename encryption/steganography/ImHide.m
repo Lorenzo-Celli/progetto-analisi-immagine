@@ -24,7 +24,6 @@ function [res] = ImHide(imInput,imHide)
     res  = IBP15+IBP14+IBP13+IBP12+IBP11+IBP10+IBP9 ...
              +IBP8+HBP7+HBP6+HBP5+HBP4+HBP3+HBP2+HBP1+HBP0;
     
-    figure, imshow(res);
 
 end
 
