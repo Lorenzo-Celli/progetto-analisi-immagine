@@ -17,15 +17,6 @@ for ind = 1 : lung
 end
 
 
-% for i = 1 : z
-%     tmp = double(ImgInp(:,:,z));
-%     dctI = dct2(tmp,size(tmp));
-%     dctI(:,:,i) = dctI;
-% end
-
-
-% dctI = uint8(dctI);
-
 %itero su x y e z dell'immagine
 for i = 1 : z
     Img = ImgInp(:,:,i);
@@ -38,14 +29,6 @@ for i = 1 : z
     end
     res(:,:,i) = proImage(:,:,1);
 end
-
-% dctI = double(dctI);
-
-% for i = 1 : z
-%     tmp = double(dctI(:,:,z));
-%     res = idct2(tmp,size(tmp));
-%     res(:,:,i) = res;
-% end
 
 
 return;

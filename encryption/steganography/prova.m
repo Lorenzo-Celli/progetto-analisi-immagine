@@ -1,7 +1,7 @@
 %% prova text hiding
 clc, clear; close all;
 
-txt = 'Lorem ipsum dolor sit amet';
+txt = 'ciao sono dsoianbdaius';
 barbara = imread("Barbara.bmp");
 
 hide = TxtHide(barbara,txt);
